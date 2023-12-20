@@ -1,0 +1,426 @@
+@import url("./index.css");
+
+.logo * {
+	font-weight: 700;
+	font-size: 1.56rem;
+}
+
+.button--cta_login {
+	padding: 0.5rem 1rem;
+	background-color: var(--primary-color);
+	color: var(--fourth-color);
+}
+
+.form--input_n_login {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column nowrap;
+	height: 100vh;
+}
+
+.button--cta_login {
+	background-color: var(--primary-color);
+}
+
+.page--login {
+	display: flex;
+	flex-flow: column nowrap;
+	gap: 0.5em;
+	width: min(75%, 700px);
+	padding: 2rem;
+	background-color: var(--primary-color);
+	color: var(--fourth-color);
+	border-radius: 1em;
+}
+
+.page--login h1 {
+	color: var(--fourth-color);
+	margin: 0 0 0.5em 0;
+}
+
+.page--login a u {
+	color: var(--third-color);
+	font-weight: 700;
+}
+
+.page--login .input--field_n_validator {
+	position: relative;
+	display: flex;
+	flex-flow: column nowrap;
+}
+
+.page--login input {
+	background-color: var(--fourth-color);
+	padding: 1rem 0.75rem;
+}
+
+.page--login input,
+.page--login button {
+	outline: none;
+	border: none;
+	border-radius: 0.2em;
+}
+
+.page--login button[type="submit"] {
+	color: var(--dark-background);
+	cursor: pointer;
+	margin: 1em 0 0 0;
+	padding: 0.75rem;
+	background-color: var(--third-color);
+	font-weight: 700;
+}
+
+.input--state {
+	margin: 0.2em 0 0 0;
+}
+
+.input--field_n_validator span:not(.input--state) {
+	color: var(--fourth-color);
+}
+
+.input--warning {
+	color: #d80032;
+}
+
+.input--password_status_medium {
+	color: #ffb534;
+}
+
+.input--password_status_valid {
+	color: #9ade7b;
+}
+
+.navigate--user-form {
+	color: var(--fourth-color);
+	align-self: flex-end;
+	margin: 1em 0 0 0;
+}
+
+.input--state_success {
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	right: 0.5rem;
+	top: 0;
+	transform: translateY(50%);
+}
+
+.toast--notification {
+	display: flex;
+	flex-flow: column nowrap;
+	gap: 0.3em;
+	position: absolute;
+	min-width: 500px;
+	max-width: 500px;
+	top: 1rem;
+	left: 1rem;
+	border-radius: 1em;
+	background-color: var(--primary-color);
+	color: var(--fourth-color);
+	padding: 2rem 2rem 2.5rem 2rem;
+	animation: ease-in-out 1s toast--notification_from_left,
+		ease-in-out 1s toast--notification_leaving_from_left forwards;
+	animation-delay: 0s, 4s;
+}
+
+@keyframes toast--notification_from_left {
+	from {
+		transform: translateX(-200%);
+	}
+	to {
+		transform: translateX(0);
+	}
+}
+
+@keyframes toast--notification_leaving_from_left {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-200%);
+	}
+}
+
+.home--page {
+	height: 100vh;
+}
+
+.home--page .home--page_navigations {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	gap: 0.5em;
+	align-items: center;
+	height: 100%;
+}
+
+.home--page .home--page_navigations a {
+	border-radius: 99px;
+	padding: 0.75rem 1.5rem;
+	background-color: var(--primary-color);
+	color: var(--fourth-color);
+	transition: scale 0.1s ease-out;
+}
+
+.home--page .home--page_navigations a:active {
+	scale: 0.95;
+}
+
+.home--page .home--page_navigations a:focus {
+	border: 2px #ffb534 solid;
+	outline: none;
+}
+
+.home--page_heading {
+	height: 1.5em;
+	position: relative;
+	margin: 0 0 0.75em 0;
+}
+
+.home--page_heading::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: -2px;
+	width: 2px;
+	height: 100%;
+	min-height: 1em;
+	background-color: var(--primary-color);
+	animation: cursor 1s step-end infinite;
+}
+
+@keyframes cursor {
+	50% {
+		opacity: 0;
+	}
+}
+
+.animation--loading_note_data,
+.animation--no_data, .animation--page_not_found {
+	width: 200px;
+	height: 200px;
+	transform: translateY(20%);
+}
+
+.temporary--container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column;
+	height: 100vh;
+}
+
+.warning--data--output {
+	color: #d80032;
+}
+
+.notes--page {
+	padding: 3rem;
+}
+
+.notes--page .notes--page_list {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 1.5em;
+}
+
+.notes--list-item,
+.notes--list-item .list--item_heading,
+.note--item {
+	display: flex;
+	flex-flow: column nowrap;
+}
+
+.notes--page .notes--page_list .notes--list-item,
+.note--item {
+	background-color: var(--third-color);
+	padding: 1.75rem;
+	gap: 1.2em;
+	border-radius: 1em;
+	border-bottom: var(--primary-color) 0.5rem solid;
+}
+
+.item--heading h1,
+.item--heading h2 {
+	color: var(--dark-background);
+}
+
+.item--heading ~ p {
+	color: var(--dark-background);
+}
+
+.list--item_heading h2 a,
+.notes--list-item p {
+	word-break: break-all;
+}
+
+.list--item_heading h2 i {
+	color: var(--secondary-color);
+	width: fit-content;
+	padding: 0 0 0.5em 0;
+	font-size: 0.5em;
+	transform: translateY(-50%);
+}
+
+.item--heading h2 a {
+	color: var(--dark-background);
+}
+
+.item--heading span {
+	color: var(--secondary-color);
+}
+
+.note--page_item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.note--item {
+	border-radius: 1em;
+	gap: 1.5em;
+	background-color: var(--third-color);
+	padding: 2rem;
+	max-width: 90%;
+}
+
+.page--create_note {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column nowrap;
+	padding: 5rem 0;
+}
+
+.page--create_note form {
+	width: max(75%, 300px);
+	padding: 2rem;
+	gap: 0.5em;
+	display: flex;
+	flex-flow: column nowrap;
+	background-color: var(--primary-color);
+	border-radius: 0.3em;
+}
+
+.page--create_note h1 {
+	color: var(--fourth-color);
+}
+
+.page--create_note form input,
+.page--create_note form textarea,
+.page--create_note form button {
+	border-radius: 0.3em;
+	padding: 0.75rem;
+}
+
+.page--create_note form input,
+.page--create_note form textarea {
+	background-color: var(--fourth-color);
+}
+
+.page--create_note form textarea {
+	width: 100%;
+	min-height: 50vh;
+	resize: none;
+}
+
+.page--create_note form button {
+	cursor: pointer;
+	font-weight: 700;
+	background-color: var(--third-color);
+	color: var(--dark-background);
+}
+
+.note--item_actions {
+	gap: 0.75em;
+	display: flex;
+	justify-content: end;
+}
+
+.note--item_actions button {
+	height: 100%;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.action--delete i {
+	position: relative;
+	font-size: 2em;
+	color: #d80032;
+}
+
+.action--archive i {
+	font-size: 2em;
+	color: var(--dark-background);
+}
+
+.button--cta_profile,
+.button--cta_profile i {
+	display: flex;
+	justify-content: center;
+}
+
+.button--cta_profile {
+	align-items: center;
+	background-color: var(--primary-color);
+	padding: 0.75rem;
+	border-radius: 100%;
+}
+
+.button--cta_profile i {
+	width: 1rem;
+	height: 1rem;
+	color: var(--fourth-color);
+}
+
+.page--profile_me {
+	gap: 1em;
+}
+
+.page--profile_me,
+.profile--me,
+.profile--cta {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column nowrap;
+}
+
+.page--profile_me {
+	height: 100vh;
+	padding: 3rem;
+}
+
+.profile--cta {
+	padding: 1rem;
+	gap: 1em;
+}
+
+.profile--cta button {
+	display: flex;
+	gap: 0.75em;
+	align-items: center;
+	justify-content: center;
+	border-radius: 0.3em;
+	background-color: var(--primary-color);
+	outline: none;
+	cursor: pointer;
+	font-size: 1.5rem;
+	padding: 0.3em 0.6em;
+	transition: scale 0.1s ease-in-out;
+}
+
+.profile--cta button:active {
+	scale: 0.95;
+}
+
+.profile--cta button i,
+.profile--cta button span {
+	color: var(--fourth-color);
+}
+
+.profile--cta button span {
+	font-size: 0.75em;
+}
